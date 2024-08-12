@@ -1,8 +1,6 @@
-# Astro-CV-Esquelete
-
-Astro-CV-Esquelete is a free, easy-to-use CV template with a clean design. Just fill in your details and you're ready to go!
-
 ## Project Structure
+
+/TODO: cambiar la estructura
 
      ┣ 📂public
      ┃ ┣ 📜cv-20240219.pdf
@@ -81,7 +79,7 @@ All commands are run from the root of the project, from a terminal:
 
 All content is in Markdown files classified in directories in `/src/pages`
 
-![alt text](https://github.com/mmouzo/astro-cv-esquelete/blob/main/public/snap-md.png?raw=true)
+![alt text](https://github.com/susogboy/porfolio_final_suso.git)
 
 To edit the content simply add, delete or modify the .md files.
 
@@ -92,19 +90,3 @@ To edit the content simply add, delete or modify the .md files.
 Go to `Container.astro` in` src/components/`.
 
 To add a new field, add a new `<AccordionLayout />` component with the appropriate properties and the corresponding child component.
-
-**Remove an existing field:**
-
-To remove an existing field, simply comment out the `<AccordionLayout />` component of that particular field or delete it.
-
-![alt text](https://github.com/mmouzo/astro-cv-esquelete/blob/main/public/snap-items.png?raw=true)
-
-## Demo
-
-[astro-cv-esquelete](https://astro-cv-esquelete.vercel.app/ "astro-cv-esquelete")
-
- ![alt text](https://github.com/mmouzo/astro-cv-esquelete/blob/main/public/snap_project.webp?raw=true)
-
-## Acknowledgments
-
-I want to thank [@USKhokhar](https://github.com/USKhokhar "@USKhokhar") who did [Astro-Vitae](https://github.com/USKhokhar/astro-vitae "Astro-Vitae") that served as the basis for this project.
