@@ -4,6 +4,7 @@ location: University of California, Los Angeles (UCLA)
 url: http://foeberoz.gm/kuj
 institute: University of California
 date: 1970-1975
+degree: 10
 tags:
   [
     "Criminal Justice",

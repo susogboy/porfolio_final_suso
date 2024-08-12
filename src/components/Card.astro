@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-const { timeframe, title, description, url, tags, url_name, location } =
+const { timeframe, title, description, url, tags, url_name, location, degree } =
   Astro.props;
 ---
 
@@ -9,10 +9,17 @@ const { timeframe, title, description, url, tags, url_name, location } =
     <div class="grid grid-cols-3 gap-4 mb-2">
       <div class="self-start col-span-2 justify-self-start text-left">
         <h1 class="uppercase card-title font-extrabold tracking-tighter md:text-2xl">{title}</h1>
+        {degree && (
+          <div class="mt-1 flex items-center">
+            <p class="text-sm font-semibold text-secondary mr-2">
+              Degree: {degree}
+            </p>
+          </div>
+        )}
         {location && (
           <div class="flex items-center mt-2">
             <Icon name="carbon:location" class="w-4 h-4 mr-1" />
-            <p class="text-sm  font-light text-secondary">{location}</p>
+            <p class="text-sm font-light text-secondary">{location}</p>
           </div>
         )}
       </div>
@@ -34,7 +41,7 @@ const { timeframe, title, description, url, tags, url_name, location } =
         {Array.isArray(tags) && (
           <div class="flex flex-wrap content-around gap-2 my-4">
             {tags.map((item) => (
-              <span class="badge text-center inline-block align-middle w-max h-max text-sm  badge-outline shadow-md mb-1" :key={item}>{item}</span>
+              <span class="badge text-center inline-block align-middle w-max h-max text-sm badge-outline shadow-md mb-1" :key={item}>{item}</span>
             ))}
           </div>
         )}
