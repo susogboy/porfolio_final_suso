@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-const { timeframe, title, description, url, tags, url_name, location, degree } =
+const { timeframe, title, description, url, tags, url_name, location, grade } =
   Astro.props;
 ---
 
@@ -9,10 +9,10 @@ const { timeframe, title, description, url, tags, url_name, location, degree } =
     <div class="grid grid-cols-3 gap-4 mb-2">
       <div class="self-start col-span-2 justify-self-start text-left">
         <h1 class="uppercase card-title font-extrabold tracking-tighter md:text-2xl">{title}</h1>
-        {degree && (
+        {grade && (
           <div class="mt-1 flex items-center">
             <p class="text-sm font-semibold text-secondary mr-2">
-              Degree: {degree}
+              Grade: {grade}
             </p>
           </div>
         )}
