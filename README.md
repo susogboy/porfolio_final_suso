@@ -1,15 +1,18 @@
 ## Project Structure
 
-/TODO: cambiar la estructura
-
      ┣ 📂public
-     ┃ ┣ 📜cv-20240219.pdf
+     ┃ ┣ 📜CertificadoCursoPropioCiber_20 23_Jesús Fernández Santiago.pdf
+     ┃ ┣ 📜CiscoCertificado_2023_Jesus Fernandez Santiago.pdf
+     ┃ ┣ 📜CV-INGLES-SinFoto-JesusFernandez.pdf
+     ┃ ┣ 📜diplomaPythonIBM.pdf
      ┃ ┣ 📜favicon.webp
-     ┃ ┣ 📜gl_flag_128x.png
-     ┃ ┣ 📜profile.webp
+     ┃ ┣ 📜flag_madrid.png
+     ┃ ┣ 📜me.jpeg
+     ┃ ┣ 📜snap_laptop.png
+     ┃ ┣ 📜snap_mobile.png
+     ┃ ┗ 📜snap_project.png
+     ┃ ┗ 📜snap-items.png
      ┃ ┣ 📜snap-md.png
-     ┃ ┣ 📜snap_laptop.webp
-     ┃ ┗ 📜snap_mobile.webp
      ┣ 📂src
      ┃ ┣ 📂components
      ┃ ┃ ┣ 📜Card.astro
@@ -24,31 +27,33 @@
      ┃ ┃ ┣ 📂about
      ┃ ┃ ┃ ┗ 📜about.md
      ┃ ┃ ┣ 📂blogs
-     ┃ ┃ ┃ ┗ 📜home-mmouzo.md
+     ┃ ┃ ┃ ┗ 📜home-susogboy.md
      ┃ ┃ ┣ 📂certificates
-     ┃ ┃ ┃ ┗ 📜backend2022.md
+     ┃ ┃ ┃ ┗ 📜0webDevelopmentPython.md
+     ┃ ┃ ┃ ┗ 📜1pythonFullStack.md
+     ┃ ┃ ┃ ┗ 📜2Cybersecurity.md
+     ┃ ┃ ┃ ┗ 📜3Cisco.md
      ┃ ┃ ┣ 📂contact
      ┃ ┃ ┃ ┣ 📜email.md
      ┃ ┃ ┃ ┣ 📜github.md
      ┃ ┃ ┃ ┣ 📜linkedin.md
-     ┃ ┃ ┃ ┗ 📜telegram.md
+     ┃ ┃ ┃ ┗ 📜malt.md
      ┃ ┃ ┣ 📂projects
-     ┃ ┃ ┃ ┗ 📜spotfilm.md
+     ┃ ┃ ┃ ┗ 📜dalhia.md
      ┃ ┃ ┣ 📂studies
      ┃ ┃ ┃ ┣ 📜dam.md
-     ┃ ┃ ┃ ┗ 📜smr.md
+     ┃ ┃ ┃ ┗ 📜tfg.md
      ┃ ┃ ┣ 📂works
-     ┃ ┃ ┃ ┣ 📜work1.md
-     ┃ ┃ ┃ ┗ 📜work2.md
+     ┃ ┃ ┃ ┣ 📜ey.md
      ┃ ┃ ┗ 📜index.astro
      ┃ ┗ 📜env.d.ts
      ┣ 📜.gitattributes
      ┣ 📜.gitignore
-     ┣ 📜LICENSE
-     ┣ 📜README.md
      ┣ 📜astro.config.mjs
+     ┣ 📜LICENSE
      ┣ 📜package-lock.json
      ┣ 📜package.json
+     ┣ 📜README.md
      ┣ 📜tailwind.config.mjs
      ┗ 📜tsconfig.json
 
