@@ -2,7 +2,7 @@
 title: Python Full Stack
 org: IBM
 tags: [Full Stack Development, Internet basics, Programming basics, Git y Github, Web Development - HTML CSS and JavaScript, Python basics and syntax, Programming in Python - Algorithms, Testing with Python, OOP with Python]
-url: ./public/diplomaPythonIBM.pdf
+url: ./diplomaPythonIBM.pdf
 date: May 2024
 ---
 
