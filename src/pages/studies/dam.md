@@ -1,5 +1,5 @@
 ---
-title: Higher Degree Cycle Development of Multiplatform Applications
+title: Associate´s Degree in Development of Multiplatform Applications
 location: Madrid, España
 url: https://www.ufv.es/
 institute: University Francisco de Vitoria

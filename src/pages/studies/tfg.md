@@ -1,5 +1,5 @@
 ---
-title: Final Degree Project "Dalhia Brand"
+title: Thesis Project "Dalhia Brand"
 location: Madrid, España
 url: https://www.ufv.es/
 institute: University Francisco de Vitoria
