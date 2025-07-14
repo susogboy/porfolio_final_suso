@@ -7,6 +7,8 @@ pronouns: "he/him/el"
 website: "http://jesusfernandezdev.com"
 ---
 
-I am application developer from Madrid, Spain. As an outgoing and enthusiastic individual, I am always looking to connect with others and embrace new experiences. I have a deep passion for sports, particularly soccer, and I also have a great love for animals.
+I am a full stack application developer based in Madrid, Spain. Currently working with Angular and Spring Boot, I’m enjoying the opportunity to build meaningful and scalable applications while honing my technical skills.
 
-In my role as a developer, I am constantly seeking new challenges and opportunities for growth. I am excited about tackling projects that push my technical skills and allow me to continue learning. My commitment to excellence and my drive for continuous improvement motivate me to deliver innovative and effective solutions. With my energy and eagerness to excel, I strive to contribute meaningfully to every project I undertake.
+As an outgoing and enthusiastic individual, I value connecting with colleagues, embracing challenges, and contributing to impactful projects. I take pride in writing clean, efficient code and optimizing both performance and user experience.
+
+Outside of work, I’m passionate about sports — especially soccer — and I have a deep love for animals. I’m excited to continue growing as a developer and to bring my energy, curiosity, and commitment to excellence to everything I do.
