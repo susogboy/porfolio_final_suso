@@ -1,6 +1,6 @@
 ---
 title: Thesis Project "Dalhia Brand"
-location: Madrid, España
+location: Madrid, Spain
 url: https://www.ufv.es/
 institute: University Francisco de Vitoria
 date: 2023-2024

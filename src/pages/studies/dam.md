@@ -1,6 +1,6 @@
 ---
 title: Associate´s Degree in Development of Multiplatform Applications
-location: Madrid, España
+location: Madrid, Spain
 url: https://www.ufv.es/
 institute: University Francisco de Vitoria
 date: 2022-2024
