@@ -1,15 +1,28 @@
 ---
 title: Full Stack Developer
-date: Feb 2025 - ACT
+title_es: Full Stack Developer
+date: Feb 2025 - Present
+date_es: Feb 2025 - Actualidad
 url: https://www.minsait.com/es
-location: Madrid, España
+location: Madrid, Spain
+location_es: Madrid, España
 org: Minsait
 tags: ["Full Stack Developer", "Angular", "Spring Boot", "Application development"]
+tags_es: ["Full Stack Developer", "Angular", "Spring Boot", "Desarrollo de aplicaciones"]
+description_es:
+  [
+    "Desarrollo y mantengo aplicaciones full stack utilizando Angular, Spring Boot e integraciones basadas en SQL.",
+    "Construyo arquitectura frontend modular con routing, guards, componentes reutilizables, directivas personalizadas y pipes.",
+    "Integro componentes de PrimeNG y optimizo el rendimiento de la interfaz con buenas practicas de Angular como ChangeDetectionStrategy y trackBy.",
+    "Consumo APIs REST con HttpClient y gestiono flujos asincronos utilizando patrones de RxJS.",
+    "Implemento servicios backend, sincronizaciones de base de datos y flujos de testing de APIs con Postman y Jest.",
+    "Trabajo en sprints Agile con Jira, colaborando con companeros y stakeholders durante las fases de entrega."
+  ]
 ---
 
-- Developed an application to replace an obsolete system, enhancing performance, scalability, and user experience.
-- Implemented a modular Angular architecture with lazy loading, advanced routing, guards, and reusable components, custom directives, and pipes.
-- Integrated the PrimeNG library and optimized performance using techniques like ChangeDetectionStrategy and trackBy.
-- Consumed APIs with HttpClient and managed asynchrony using observables and RxJS patterns.
-- Developed the backend with Spring Boot, RESTful services, and SQL synchronizations; tested with Postman and Jest, and managed dependencies with Maven.
-- Worked in a team under Agile methodology with Jira, in sprints and collaborating with stakeholders.
+- Develop and maintain full stack applications using Angular, Spring Boot and SQL-based integrations.
+- Build modular frontend architecture with routing, guards, reusable components, custom directives and pipes.
+- Integrate PrimeNG components and optimize UI performance with Angular best practices including ChangeDetectionStrategy and trackBy.
+- Consume REST APIs with HttpClient and manage asynchronous flows using RxJS patterns.
+- Implement backend services, database synchronizations and API testing workflows with Postman and Jest.
+- Work in Agile sprints with Jira, collaborating with teammates and stakeholders across delivery phases.

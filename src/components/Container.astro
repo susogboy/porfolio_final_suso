@@ -14,41 +14,56 @@ const PDF = "/CV_JesusFernandez.pdf";
 ---
 
 <div class="join join-vertical gap-1">
-  <AccordionLayout title={"About"} icon={"carbon:identification"}>
+  <AccordionLayout title={"About"} titleEs={"Sobre mi"} icon={"carbon:identification"}>
     <article class="text-justify">
-      <Fragment set:html={about.compiledContent()} />
+      <div class="i18n-en">
+        <Fragment set:html={about.compiledContent()} />
+      </div>
+      <div class="i18n-es">
+        {about.frontmatter.content_es.map((item) => <p>{item}</p>)}
+      </div>
     </article>
   </AccordionLayout>
 
-  <AccordionLayout title={"Work"} icon={"carbon:construction"}>
+  <AccordionLayout title={"Work"} titleEs={"Experiencia"} icon={"carbon:construction"}>
     {
       works.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
+            titleEs={item.frontmatter.title_es}
             timeframe={item.frontmatter.date}
+            timeframeEs={item.frontmatter.date_es}
             description={item.compiledContent()}
+            descriptionEs={item.frontmatter.description_es}
             tags={item.frontmatter.tags}
+            tagsEs={item.frontmatter.tags_es}
             url={item.frontmatter.url}
             url_name={item.frontmatter.org}
             location={item.frontmatter.location}
+            locationEs={item.frontmatter.location_es}
           />
         );
       })
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Studies"} icon={"carbon:education"}>
+  <AccordionLayout title={"Studies"} titleEs={"Estudios"} icon={"carbon:education"}>
     {
       studies.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
+            titleEs={item.frontmatter.title_es}
             timeframe={item.frontmatter.date}
+            timeframeEs={item.frontmatter.date_es}
             location={item.frontmatter.location}
+            locationEs={item.frontmatter.location_es}
             tags={item.frontmatter.tags}
+            tagsEs={item.frontmatter.tags_es}
             url={item.url}
             url_name={item.frontmatter.institute}
+            urlNameEs={item.frontmatter.institute_es}
             grade={item.frontmatter.grade}
           />
         );
@@ -56,57 +71,71 @@ const PDF = "/CV_JesusFernandez.pdf";
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Projects"} icon={"carbon:tools"}>
+  <AccordionLayout title={"Projects"} titleEs={"Proyectos"} icon={"carbon:tools"}>
     {
       projects.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
+            titleEs={item.frontmatter.title_es}
             timeframe={item.frontmatter.date}
+            timeframeEs={item.frontmatter.date_es}
             description={item.compiledContent()}
+            descriptionEs={item.frontmatter.description_es}
             tags={item.frontmatter.tags}
+            tagsEs={item.frontmatter.tags_es}
             url={item.frontmatter.url}
             url_name={"View project"}
+            urlNameEs={"Ver proyecto"}
           />
         );
       })
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Certifications"} icon={"carbon:certificate"}>
+  <AccordionLayout title={"Certifications"} titleEs={"Certificaciones"} icon={"carbon:certificate"}>
     {
       certificates.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
+            titleEs={item.frontmatter.title_es}
             timeframe={item.frontmatter.date}
+            timeframeEs={item.frontmatter.date_es}
             description={item.compiledContent()}
+            descriptionEs={item.frontmatter.description_es}
             tags={item.frontmatter.tags}
+            tagsEs={item.frontmatter.tags_es}
             url={item.frontmatter.url}
             url_name={"View Certificate"}
+            urlNameEs={"Ver certificado"}
           />
         );
       })
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Blogs"} icon={"carbon:pen"}>
+  <AccordionLayout title={"Blogs"} titleEs={"Blog"} icon={"carbon:pen"}>
     {
       blogs.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
+            titleEs={item.frontmatter.title_es}
             timeframe={item.frontmatter.date}
+            timeframeEs={item.frontmatter.date_es}
             description={item.compiledContent()}
+            descriptionEs={item.frontmatter.description_es}
             url={item.frontmatter.url}
             url_name={item.frontmatter.url_name}
+            urlNameEs={item.frontmatter.url_name_es}
           />
         );
       })
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Files"} icon={"carbon:volume-file-storage"}>
+  <AccordionLayout title={"Files"} titleEs={"Archivos"} icon={"carbon:volume-file-storage"}>
     <div class="flex justify-center w-full">
       <div
         class="card card-compact card-bordered border-[oklch(var(--s))] w-96 md:w-112 lg:w-128 hover:shadow-lg transition-all"
@@ -115,12 +144,21 @@ const PDF = "/CV_JesusFernandez.pdf";
           <object data={PDF} type="application/pdf" width="100%"></object>
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Resume</h2>
-          <p>View and download my resume by clicking on the button below</p>
+          <h2 class="card-title">
+            <span class="i18n-en">Resume PDF</span>
+            <span class="i18n-es">CV PDF</span>
+          </h2>
+          <p>
+            <span class="i18n-en">Download a PDF version of my resume. The portfolio includes my latest work updates.</span>
+            <span class="i18n-es">Descarga una version PDF de mi CV. El portfolio incluye mis actualizaciones profesionales mas recientes.</span>
+          </p>
           <div class="card-actions justify-end">
             <a target="_blank" href={PDF}>
               <button class="btn btn-outline">
-                <p>Download resume</p>
+                <p>
+                  <span class="i18n-en">Download resume</span>
+                  <span class="i18n-es">Descargar CV</span>
+                </p>
                 <Icon name="carbon:document-pdf" class="w-6 h-6 ml-1" />
               </button>
             </a>
@@ -130,7 +168,7 @@ const PDF = "/CV_JesusFernandez.pdf";
     </div>
   </AccordionLayout>
 
-  <AccordionLayout title={"Contact"} icon={"carbon:location-person"}>
+  <AccordionLayout title={"Contact"} titleEs={"Contacto"} icon={"carbon:location-person"}>
     <div class="flex flex-wrap content-around gap-4 justify-center">
       {
         contact.map((item) => {
@@ -138,6 +176,7 @@ const PDF = "/CV_JesusFernandez.pdf";
             <ContactCard
               url={item.frontmatter.url}
               url_name={item.frontmatter.title}
+              urlNameEs={item.frontmatter.title_es}
               icon={item.frontmatter.icon}
             />
           );

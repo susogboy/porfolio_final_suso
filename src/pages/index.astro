@@ -16,6 +16,9 @@ import { Icon } from "astro-icon/components";
           "data-theme",
           localStorage.getItem("theme")
         );
+
+      const savedLang = localStorage.getItem("lang") || "en";
+      document.documentElement.setAttribute("data-lang", savedLang);
     </script>
     <script>
       import { themeChange } from "theme-change";
@@ -30,8 +33,17 @@ import { Icon } from "astro-icon/components";
   <body class="flex flex-col min-h-screen">
     <Header />
     <div
-      class="flex items-center absolute top-4 right-4 md:top-6 md:right-6 lg:top-8 lg:right-8 xl:top-10 xl:right-10 z-10"
+      class="flex items-center gap-2 absolute top-4 right-4 md:top-6 md:right-6 lg:top-8 lg:right-8 xl:top-10 xl:right-10 z-10"
     >
+      <button
+        id="language-toggle"
+        type="button"
+        class="btn btn-xs btn-outline min-h-0 h-6 px-2 font-mono"
+        aria-label="Change language"
+      >
+        <span class="i18n-en">ES</span>
+        <span class="i18n-es">EN</span>
+      </button>
       <Icon name="carbon:moon" class="w-4 h-4" />
       <input
         type="checkbox"
@@ -42,6 +54,16 @@ import { Icon } from "astro-icon/components";
       />
       <Icon name="carbon:light" class="w-4 h-4" />
     </div>
+    <script is:inline>
+      const languageToggle = document.getElementById("language-toggle");
+      languageToggle?.addEventListener("click", () => {
+        const currentLang =
+          document.documentElement.getAttribute("data-lang") || "en";
+        const nextLang = currentLang === "es" ? "en" : "es";
+        document.documentElement.setAttribute("data-lang", nextLang);
+        localStorage.setItem("lang", nextLang);
+      });
+    </script>
 
     <div
       class="divider mx-auto h-fit max-w-3xl w-[95vw] flex flex-nowrap bg-secondary"
@@ -61,6 +83,14 @@ import { Icon } from "astro-icon/components";
 <style is:global>
   body {
     font-family: "DM Sans Variable", sans-serif;
+  }
+
+  html:not([data-lang="es"]) .i18n-es {
+    display: none;
+  }
+
+  html[data-lang="es"] .i18n-en {
+    display: none;
   }
 
   @media (min-width: 768px) {

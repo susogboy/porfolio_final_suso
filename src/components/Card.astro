@@ -1,25 +1,46 @@
 ---
 import { Icon } from "astro-icon/components";
-const { timeframe, title, description, url, tags, url_name, location, grade } =
-  Astro.props;
+const {
+  timeframe,
+  timeframeEs = timeframe,
+  title,
+  titleEs = title,
+  description,
+  descriptionEs,
+  url,
+  tags,
+  tagsEs = tags,
+  url_name,
+  urlNameEs = url_name,
+  location,
+  locationEs = location,
+  grade,
+} = Astro.props;
 ---
 
 <div class="card card-compact card-bordered border border-[oklch(var(--s))] w-full md:w-112 lg:w-128 hover:shadow-lg transition-all my-4">
   <div class="card-body">
     <div class="grid grid-cols-3 gap-4 mb-2">
       <div class="self-start col-span-2 justify-self-start text-left">
-        <h1 class="uppercase card-title font-extrabold tracking-tighter md:text-2xl">{title}</h1>
+        <h1 class="uppercase card-title font-extrabold tracking-tighter md:text-2xl">
+          <span class="i18n-en">{title}</span>
+          <span class="i18n-es">{titleEs}</span>
+        </h1>
         {grade && (
           <div class="mt-1 flex items-center">
             <p class="text-sm font-semibold text-secondary mr-2">
-              Grade: {grade}
+              <span class="i18n-en">Grade</span>
+              <span class="i18n-es">Nota</span>: {grade}
             </p>
           </div>
         )}
         {location && (
           <div class="flex items-center mt-2">
             <Icon name="carbon:location" class="w-4 h-4 mr-1" />
-            <p class="text-sm font-light text-secondary">{location}</p>
+            <p class="text-sm font-light text-secondary">
+              <span class="i18n-en">{location}</span>
+              <span class="i18n-es">{locationEs}</span>
+            </p>
           </div>
         )}
       </div>
@@ -27,7 +48,8 @@ const { timeframe, title, description, url, tags, url_name, location, grade } =
       <div class="self-center justify-self-end">
         {timeframe && (
           <div class="badge w-max h-max text-center badge-outline inline-block align-middle shadow-md font-mono">
-            {timeframe}
+            <span class="i18n-en">{timeframe}</span>
+            <span class="i18n-es">{timeframeEs}</span>
           </div>
         )}
       </div>
@@ -36,12 +58,23 @@ const { timeframe, title, description, url, tags, url_name, location, grade } =
     <div class="grid grid-cols-3 gap-4 place-items-center">
       <div class="self-start col-span-2 justify-self-start text-left">
         <article class="prose text-secondary">
-          <Fragment set:html={description}></Fragment>
+          <div class="i18n-en">
+            <Fragment set:html={description}></Fragment>
+          </div>
+          {Array.isArray(descriptionEs) && (
+            <ul class="i18n-es">
+              {descriptionEs.map((item) => <li>{item}</li>)}
+            </ul>
+          )}
+          {typeof descriptionEs === "string" && <p class="i18n-es">{descriptionEs}</p>}
         </article>
         {Array.isArray(tags) && (
           <div class="flex flex-wrap content-around gap-2 my-4">
             {tags.map((item) => (
-              <span class="badge text-center inline-block align-middle w-max h-max text-sm badge-outline shadow-md mb-1" :key={item}>{item}</span>
+              <span class="i18n-en badge text-center align-middle w-max h-max text-sm badge-outline shadow-md mb-1" :key={item}>{item}</span>
+            ))}
+            {Array.isArray(tagsEs) && tagsEs.map((item) => (
+              <span class="i18n-es badge text-center align-middle w-max h-max text-sm badge-outline shadow-md mb-1" :key={item}>{item}</span>
             ))}
           </div>
         )}
@@ -49,7 +82,8 @@ const { timeframe, title, description, url, tags, url_name, location, grade } =
 
       <div class="self-center justify-self-end">
         <a href={url} target="_blank" class="link link-hover text-sm text-right flex justify-center items-center">
-          {url_name}
+          <span class="i18n-en">{url_name}</span>
+          <span class="i18n-es">{urlNameEs}</span>
           {url !== "#" && <Icon name="carbon:link" class="w-4 h-4 ml-2" />}
         </a>
       </div>

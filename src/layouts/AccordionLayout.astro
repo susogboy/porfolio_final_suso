@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import BaseLayout from "./BaseLayout.astro";
-const { title, icon } = Astro.props;
+const { title, titleEs = title, icon } = Astro.props;
 ---
 
 <BaseLayout>
@@ -10,7 +10,8 @@ const { title, icon } = Astro.props;
     <div class="collapse-title font-extrabold tracking-tight md:text-2xl">
       <div class="flex">
         <Icon name={icon} class="w-8 h-8 mr-4" />
-        {title}
+        <span class="i18n-en">{title}</span>
+        <span class="i18n-es">{titleEs}</span>
       </div>
     </div>
     <div class="collapse-content">

@@ -31,11 +31,15 @@ import * as about from "../pages/about/about.md";
         </h1>
       </div>
       <h2 class="text-lg mb-2 text-secondary">
-        {about.frontmatter.designation}
+        <span class="i18n-en">{about.frontmatter.designation}</span>
+        <span class="i18n-es">{about.frontmatter.designation_es}</span>
       </h2>
       <div class="flex items-center justify-center mt-1">
         <Icon name="carbon:location" class="w-4 h-4 mr-1" />
-        <p class="text-sm text-secondary">{about.frontmatter.location}</p>
+        <p class="text-sm text-secondary">
+          <span class="i18n-en">{about.frontmatter.location}</span>
+          <span class="i18n-es">{about.frontmatter.location_es}</span>
+        </p>
       </div>
     </div>
   </article>
